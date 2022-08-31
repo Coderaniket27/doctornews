@@ -39,7 +39,7 @@ const Home = () => {
                   We Will Provide Best Hospital At Affordable Price
                 </li>
                 <li>
-                  Free Online Doctor
+                  Free Online Doctor Consultation
                 </li>
                 <li>
                   50% Discount On The Consultation  Fee
