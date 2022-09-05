@@ -137,7 +137,7 @@ Connect with Care Expert
           </div>
           <div className='miniFlex'>
 <div className='step'>
-  Step 1
+  Step 2
 </div>
 <div className='stepHead'>
 Hospital & Doctor Recommendations
@@ -150,7 +150,7 @@ Hospital & Doctor Recommendations
           </div>
           <div className='miniFlex'>
 <div className='step'>
-  Step 1
+  Step 3
 </div>
 <div className='stepHead'>
 Connect with Best Doctors
@@ -164,7 +164,7 @@ Connect with Best Doctors
           </div>
           <div className='miniFlex'>
 <div className='step'>
-  Step 1
+  Step 4
 </div>
 <div className='stepHead'>
 Inpatient Support with Care Expert
@@ -175,6 +175,27 @@ Inpatient Support with Care Expert
         </div>
       </div>
 
+    </div>
+    <div className='LastOne'>
+      <div className='LastFlex'>
+<div className='know'>
+Know us better
+</div>
+<div className='LastP'>
+<div className='LastPara'>
+<strong>Save-Lifes </strong> strives to serve its patients for <strong>daycare </strong>
+surgeries, using the latest technology. We ensure a smooth
+experience before, during, and after treatment. Our team of highly
+experienced <strong>doctors </strong> assure that you receive premium care at our
+partner hospitals. From providing a detailed diagnosis, scheduling
+your surgery, commuting to and from the hospital, completing your
+insurance paperwork and hospital discharge to follow-up
+consultations, <strong>Save-Lifes </strong>takes care of it all
+</div><div className='LastImage'>
+  <img className='LastImg' src="who.jpg" alt="about"/>
+</div>
+</div>
+      </div>
     </div>
         </div>
        
