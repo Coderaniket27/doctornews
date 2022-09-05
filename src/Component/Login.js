@@ -9,7 +9,8 @@ const Login = () => {
   const[data,setdata] = useState({})
   function handle(e){
     e.preventDefault()
-    axios.post("http://localhost:3001/login",{email,password}).then(res =>{setdata(res.data)}).then(()=>{console.log(data.data)})
+    axios.post("https://thapa-api.herokuapp.com/login",{email,password}).then(res =>{setdata(res.data)
+  console.log(res)})
  if(data.status===200){
   return navigate('/Patientinfo')
  }
