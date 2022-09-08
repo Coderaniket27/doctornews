@@ -6,34 +6,45 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useState } from 'react'
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import axios from 'axios'
 
 
 
 const NewHome = () => {
-  const[password,setpassword]= useState("");
   const[email,setemail] =useState("")
   const[name,setname]= useState("");
   const[phone,setphone] =useState("")
   const[address,setaddress]= useState("");
   const[query,setquery] =useState("")
   const[data,setdata] = useState({})
-
+const[button,setbutton]=useState(false)
   
     
   
   function handle(e){
     e.preventDefault()
-    axios.post("http://localHost:3001/register",{password,email,name,query,phone,address }).then(res =>{setdata(res)})
+    axios.post("https://thapa-api.herokuapp.com/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)})
 
-console.log(data.status)
+console.log(data)
+if(data.status===200){
+  alert("We will contact you soon");
+}
 
   }
   return (
     <div>
         <div>
             <div className='imgSlider '>
-                <div className='font-mono ... text-6xl font-black	'>Save-Life</div>
+            
+<div>
+  <div>                <img src="newlog.jpg" alt="logo" style={{height:"150px",width:"160px"}}/>
+</div>
+                <div className='font-mono ... text-6xl font-black	'>Save-Life
+</div>
+
+                </div>
             </div>
             
             <div className='card-flex'>
@@ -213,12 +224,27 @@ insurance paperwork and hospital discharge to follow-up
 consultations, <strong>Save-Lifes </strong>takes care of it all
 </div><div className='LastImage'>
   <img className='LastImg' src="who.jpg" alt="about"/>
+  <div>
+  <Stack direction="row" className='innerbuut' spacing={5}>
+      
+      <Button variant="contained" onClick={(e) =>{setbutton(!button)}} style={{backgroundColor:"red",paddingTop:"10px",paddingBottom:"10px",paddingLeft:"40px",paddingRight:"40px"}}
+      color="success">
+        Enquiry
+      </Button>
+     
+    </Stack>
+  </div>
 </div>
 </div>
       </div>
      
     </div>
-    <div className='enquiry'>
+    <div>
+       
+      
+    {button? 
+          " " : 
+        <div className='enquiry'>
     <div className='deko'> <div className='flexy'>
     <div className='new'>
     <div className="min-h-full  flex items-center justify-center MainPad		  sm:px-6 lg:px-8">
@@ -229,7 +255,7 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
     <h2 className="mt-1 text-center text-3xl  font-extrabold text-gray-900">Enquiry Form</h2>
    
   </div>
-  <form className="mt-8 space-y-6">
+  <form className="mt-12 space-y-6">
     <input type="hidden" name="remember" />
     <div className="rounded-md shadow-sm -space-y-px">
       <div className="pb-3 ...">
@@ -242,9 +268,6 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
       
       <div className="pb-3 ...">
         <input id="Contact" name="Contact" type="text" a required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"onChange={ (e) => {setphone(e.target.value)}} placeholder="Contact"/>
-      </div>
-      <div className="pb-3 ...">
-        <input id="Password" name="Password" type="Password"  required className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" onChange={ (e) => {setpassword(e.target.value)}} placeholder="Password"/>
       </div>
       
       <div className="pb-3 ...">
@@ -269,9 +292,10 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
 
 </div>
 </div>
-  </div></div>
+  </div>
     </div>
-
+    </div>}
+    </div>
         </div>
        
     </div>
