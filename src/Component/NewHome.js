@@ -34,16 +34,14 @@ if(data.status===200){
 
   }
   return (
-    <div>
+    <div >
         <div>
             <div className='imgSlider '>
             
-<div>
-  <div>                <img src="newlog.jpg" alt="logo" style={{height:"150px",width:"160px"}}/>
+<div >
+  <div className="logo">                <img   src="saves1.png" alt="logo" style={{height:"250px",width:"180px"}}/>
 </div>
-                <div className='font-mono ... text-6xl font-black	'>Save-Life
-</div>
-
+                
                 </div>
             </div>
             
@@ -224,16 +222,7 @@ insurance paperwork and hospital discharge to follow-up
 consultations, <strong>Save-Lifes </strong>takes care of it all
 </div><div className='LastImage'>
   <img className='LastImg' src="who.jpg" alt="about"/>
-  <div>
-  <Stack direction="row" className='innerbuut' spacing={5}>
-      
-      <Button variant="contained" onClick={(e) =>{setbutton(!button)}} style={{backgroundColor:"red",paddingTop:"10px",paddingBottom:"10px",paddingLeft:"40px",paddingRight:"40px"}}
-      color="success">
-        Enquiry
-      </Button>
-     
-    </Stack>
-  </div>
+  
 </div>
 </div>
       </div>
@@ -296,6 +285,29 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
     </div>
     </div>}
     </div>
+    <div className='foot'>
+    <div>
+  <Stack direction="row" className='innerbuut' spacing={5}>
+      
+      <Button variant="contained" onClick={(e) =>{setbutton(!button)}} style={{backgroundColor:"red",paddingTop:"10px",paddingBottom:"10px",paddingLeft:"40px",paddingRight:"40px"}}
+      color="success">
+        Enquiry
+      </Button>
+     
+    </Stack>
+  </div>
+  <div className='contact'>
+    <div className='footbor'>
+      +91 7277706637
+    </div>
+    <div className='footbor'>
+      +91 7277706637
+    </div>
+    <div className='footbor'>
+      +91 7277706637
+    </div>
+  </div>
+  </div>
         </div>
        
     </div>
