@@ -1,22 +1,13 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "savelifes",
+  "name": "savelifes",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "PAT.jpg",
       "sizes": "128×128 50x50 310 x 150 56x56",
       "type": "image/xl-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
+    
   ],
   "start_url": ".",
   "display": "standalone",
