@@ -291,7 +291,7 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
       
       <Button variant="contained" onClick={(e) =>{setbutton(!button)}} style={{backgroundColor:"red",paddingTop:"10px",paddingBottom:"10px",paddingLeft:"40px",paddingRight:"40px"}}
       color="success">
-        Enquiry do
+        Enquiry
       </Button>
      
     </Stack>

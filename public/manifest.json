@@ -3,7 +3,7 @@
   "name": "savelifes",
   "icons": [
     {
-      "src": "PAT.jpg",
+      "src": "favicon.ico",
       "sizes": "128×128 50x50 310 x 150 56x56",
       "type": "image/xl-icon"
     }
