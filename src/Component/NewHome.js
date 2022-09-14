@@ -9,6 +9,7 @@ import { useState } from 'react'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import axios from 'axios'
+import ReactWhatsapp from 'react-whatsapp';
 
 
 
@@ -19,13 +20,13 @@ const NewHome = () => {
   const[address,setaddress]= useState("");
   const[query,setquery] =useState("")
   const[data,setdata] = useState({})
-const[button,setbutton]=useState(false)
+const[button,setbutton]=useState(true)
   
     
   
   function handle(e){
     e.preventDefault()
-    axios.post("https://thapa-api.herokuapp.com/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)})
+    axios.post("https://savelifesnew.vercel.app/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)})
 
 console.log(data)
 if(data.status===200){
@@ -41,6 +42,11 @@ if(data.status===200){
 <div >
   <div className="logo">                <img   src="saves1.png" alt="logo" style={{height:"250px",width:"180px"}}/>
 </div>
+<div className='whats'>
+      <ReactWhatsapp number="91 6202872272" message="Hello World!!!" style={{color:"red"}} >      <img src="whatsApp.jpg.webp" width="80px" height="80px" alt="whatsapp"/>
+</ReactWhatsapp>
+
+    </div>
                 
                 </div>
             </div>
@@ -303,9 +309,8 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
     <div className='footbor'>
       +91 7277706637
     </div>
-    <div className='footbor'>
-      +91 7277706637
-    </div>
+    
+
   </div>
   </div>
         </div>
