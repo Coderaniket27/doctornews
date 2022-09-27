@@ -152,7 +152,7 @@ padding: 20px;
 }.imgSlider{
   position: relative;
   height: 500px;
-  background-image: url("../public/doctor.jpg");
+  background-image: url("../public/d2.jpg");
   background-size: 100% 100%;
   box-shadow: rgba(149,157,165,0.2) 0px,8px,24px;
   animation: changeImage 40s ease-in-out infinite;
@@ -389,7 +389,7 @@ flex-wrap: wrap;
 
 @keyframes changeImage{
   0%{
-    background-image: url("../public/doctor.jpg");
+    background-image: url("../public/d2.jpg");
 
 }
 25%{

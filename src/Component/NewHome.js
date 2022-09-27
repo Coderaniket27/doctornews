@@ -31,11 +31,7 @@ const[button,setbutton]=useState(true)
 console.log(data)
 if(data.status===200){
   alert("We will contact you soon");
-  // setaddress(" ")
-  // setname(" ")
-  // setemail(" ")
-  // setphone(" ")
-  // setquery(" ")
+ 
   setbutton(!button)
 
 }
@@ -50,7 +46,7 @@ if(data.status===200){
   <div className="logo">                <img   src="saves1.png" alt="logo" style={{height:"250px",width:"180px"}}/>
 </div>
 <div className='whats'>
-      <ReactWhatsapp number="91 6202872272" message="Hello World!!!" style={{color:"red"}} >      <img src="whatsApp.jpg.webp" width="80px" height="80px" alt="whatsapp"/>
+      <ReactWhatsapp number="91 6202872272" message="Hello World!!!" style={{color:"red"}} >      <img src="whatsApp.jpg.webp" width="50px" height="50px" alt="whatsapp"/>
 </ReactWhatsapp>
 
     </div>
@@ -66,7 +62,7 @@ if(data.status===200){
         <CardMedia className='card-media'
           component="img"
           height="50"
-          image="doctor.jpg"
+          image="d2.jpg"
           alt="doctor"
         />
         <CardContent>
