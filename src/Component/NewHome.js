@@ -31,6 +31,13 @@ const[button,setbutton]=useState(true)
 console.log(data)
 if(data.status===200){
   alert("We will contact you soon");
+  // setaddress(" ")
+  // setname(" ")
+  // setemail(" ")
+  // setphone(" ")
+  // setquery(" ")
+  setbutton(!button)
+
 }
 
   }
