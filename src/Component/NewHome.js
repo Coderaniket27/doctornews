@@ -35,6 +35,9 @@ if(data.status===200){
   setbutton(!button)
 
 }
+else{
+  alert(data.message)
+}
 
   }
   return (
