@@ -20,24 +20,30 @@ const NewHome = () => {
   const[address,setaddress]= useState("");
   const[query,setquery] =useState("")
   const[data,setdata] = useState({})
+  const[response,setresponse]=useState("missing data")
 const[button,setbutton]=useState(true)
   
     
   
   function handle(e){
     e.preventDefault()
-    axios.post("https://savelifesnew.vercel.app/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)})
+    axios.post("https://savelifesnew.vercel.app/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)
+     }).then(setresponse(data.message))
 
 console.log(data)
+
 if(data.status===200){
+
   alert("We will contact you soon");
- 
   setbutton(!button)
 
 }
 else{
-  alert(data.message)
+  
+  alert(response)
+  console.log("lolo")
 }
+
 
   }
   return (
@@ -87,7 +93,8 @@ else{
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Hospital
+            Hospital 
+
           </Typography>
           <Typography variant="body2" color="text.secondary">
           You don't have to worry about the best Hospital at an affordable price. We suggest you the best at an affordable price.
