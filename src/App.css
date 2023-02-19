@@ -185,6 +185,7 @@ flex-wrap: wrap;
 .LastImage{
   width: 45%;
   padding-left: 4%;
+  margin-top: 2%;
 }
 .LastImg{
   height:280px;
@@ -403,6 +404,8 @@ flex-wrap: wrap;
 
 75%{
   background-image: url("../public/hospital.jpg");
+
+  
 
 }
 100%{

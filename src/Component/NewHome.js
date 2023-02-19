@@ -19,7 +19,7 @@ const NewHome = () => {
   const[phone,setphone] =useState("")
   const[address,setaddress]= useState("");
   const[query,setquery] =useState("")
-  const[data,setdata] = useState({})
+  const[datas,setdata] = useState({})
   const[response,setresponse]=useState("missing data")
 const[button,setbutton]=useState(true)
   
@@ -27,12 +27,12 @@ const[button,setbutton]=useState(true)
   
   function handle(e){
     e.preventDefault()
-    axios.post("https://savelifesnew.vercel.app/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)
-     }).then(setresponse(data.message))
+    axios.post("https://api-nirog.vercel.app/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)
+     }).then(setresponse(datas.message))
 
-console.log(data)
+console.log(datas)
 
-if(data.status===200){
+if(datas.status===200){
 
   alert("We will contact you soon");
   setbutton(!button)
@@ -45,11 +45,12 @@ else{
 }
 
 
+
   }
   return (
     <div >
         <div>
-            <div className='imgSlider '>
+            <div className='imgSlider'>
             
 <div >
   <div className="logo">                <img   src="saves1.png" alt="logo" style={{height:"250px",width:"180px"}}/>
