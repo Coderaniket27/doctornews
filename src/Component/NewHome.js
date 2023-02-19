@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import axios from 'axios'
@@ -22,8 +22,15 @@ const NewHome = () => {
   const[datas,setdata] = useState({})
   const[response,setresponse]=useState("missing data")
 const[button,setbutton]=useState(true)
+const[data,setdatas]=useState([])
   
-    
+    useEffect (() =>{
+      fetch("https://api-nirog.vercel.app/find")
+      .then( res => res.json())
+      .then(res =>{
+        setdatas(res.data)
+      })
+    },[])
   
   function handle(e){
     e.preventDefault()
@@ -318,7 +325,15 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
   </div>
   <div className='contact'>
     <div className='footbor'>
-      +91 7277706637
+      +91 7277706637 {data.map((e) =>{
+        return (<ul>
+          <li>{e.name}</li>
+          <li>{e.email}</li>
+          <li>
+            {e.phone}
+          </li>
+        </ul>)
+      })}
     </div>
     <div className='footbor'>
       +91 7277706637
