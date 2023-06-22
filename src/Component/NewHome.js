@@ -100,7 +100,7 @@ console.log(response,"ko")
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Doctorss
+            Doctor
           </Typography>
           <Typography className='font' variant="body2" color="text.secondary"npm>
           You don't need to search for the best doctor for your ailment Save-Lifes team does research that serves best to our clients.          </Typography>
