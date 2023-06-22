@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { useState,useEffect } from 'react'
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import axios from 'axios'
 import ReactWhatsapp from 'react-whatsapp';
 
@@ -21,7 +21,7 @@ const NewHome = () => {
   const[address,setaddress]= useState("");
   const[query,setquery] =useState("")
   
-const[button,setbutton]=useState(true)
+// const[button,setbutton]=useState(true)
 const[data,setdatas]=useState([])
   
 
@@ -274,8 +274,8 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
     <div>
        
       
-    {button? 
-          " " : 
+    
+          
         <div className='enquiry'>
     <div className='deko'> <div className='flexy'>
     <div className='new'>
@@ -326,7 +326,7 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
 </div>
   </div>
     </div>
-    </div>}
+    </div>
     </div>
     <div className='foot'>
     <div>
