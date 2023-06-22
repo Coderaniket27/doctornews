@@ -21,7 +21,7 @@ const Home = () => {
               <ul className='text-xl pb-12 leading-loose list-disc '>
 
                 <li>
-                  Emergency Ambulance 24 * 7
+                  Emergency Ambulance 24 * 7 f
                 </li>
                 <li>
                   Emergency Hospitalization

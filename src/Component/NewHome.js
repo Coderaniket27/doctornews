@@ -13,43 +13,59 @@ import ReactWhatsapp from 'react-whatsapp';
 
 
 
+
 const NewHome = () => {
   const[email,setemail] =useState("")
   const[name,setname]= useState("");
   const[phone,setphone] =useState("")
   const[address,setaddress]= useState("");
   const[query,setquery] =useState("")
-  const[datas,setdata] = useState({})
-  const[response,setresponse]=useState("missing data")
+  
 const[button,setbutton]=useState(true)
 const[data,setdatas]=useState([])
   
+
+
+
+// This arrangement can be altered based on how we want the date's format to appear.
+const current = new Date();
+  const dates = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+
+console.log()
     useEffect (() =>{
-      fetch("https://api-nirog.vercel.app/find")
+      fetch(`http://localhost:3001/finddata/${dates}`)
       .then( res => res.json())
       .then(res =>{
         setdatas(res.data)
       })
-    },[])
-  
-  function handle(e){
+    },[dates])
+   
+   async function  handle(e){
     e.preventDefault()
-    axios.post("https://api-nirog.vercel.app/register",{email,name,query,phone,address }).then(res =>{setdata(res.data)
-     }).then(setresponse(datas.message))
+    try{
+    let response= await axios.post("https://api-nirog.vercel.app/register",{email,name,query,phone,address })
 
-console.log(datas)
+console.log(response,"ko")
+ if(response?.data?.abch?.status===200){
+  alert("submitted")
+ }
+ else{
+  alert(response.data.message)
+ }
+} catch (err){
+  console.log(err)
+} 
+// if(datas.status===200){
 
-if(datas.status===200){
+//   alert("We will contact you soon");
+//   setbutton(!button)
 
-  alert("We will contact you soon");
-  setbutton(!button)
-
-}
-else{
+// }
+// else{
   
-  alert(response)
-  console.log("lolo")
-}
+//   alert(datas.message)
+//   console.log("lolo")
+// }
 
 
 
@@ -84,7 +100,7 @@ else{
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Doctor
+            Doctorss
           </Typography>
           <Typography className='font' variant="body2" color="text.secondary"npm>
           You don't need to search for the best doctor for your ailment Save-Lifes team does research that serves best to our clients.          </Typography>
@@ -320,7 +336,8 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
       color="success">
         Enquiry lo
       </Button>
-     
+      <iframe src='https://www.nirogsansar.com/'  title="frame"width ="100%" height="500px"></iframe>
+
     </Stack>
   </div>
   <div className='contact'>
@@ -342,8 +359,9 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
 
   </div>
   </div>
+  
         </div>
-       
+      {/* <HomePage/> */}
     </div>
     
   )
