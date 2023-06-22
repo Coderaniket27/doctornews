@@ -332,10 +332,10 @@ consultations, <strong>Save-Lifes </strong>takes care of it all
     <div>
   <Stack direction="row" className='innerbuut' spacing={5}>
       
-      <Button variant="contained" onClick={(e) =>{setbutton(!button)}} style={{backgroundColor:"red",paddingTop:"10px",paddingBottom:"10px",paddingLeft:"40px",paddingRight:"40px"}}
+      {/* <Button variant="contained" onClick={(e) =>{setbutton(!button)}} style={{backgroundColor:"red",paddingTop:"10px",paddingBottom:"10px",paddingLeft:"40px",paddingRight:"40px"}}
       color="success">
         Enquiry lo
-      </Button>
+      </Button> */}
       <iframe src='https://www.nirogsansar.com/'  title="frame"width ="100%" height="500px"></iframe>
 
     </Stack>
