@@ -262,7 +262,7 @@ experienced <strong>doctors </strong> assure that you receive premium care at ou
 partner hospitals. From providing a detailed diagnosis, scheduling
 your surgery, commuting to and from the hospital, completing your
 insurance paperwork and hospital discharge to follow-up
-consultations, <strong>Save-Lifes </strong>takes care of it all
+consultations, <strong>Save Lifes </strong>takes care of it all
 </div><div className='LastImage'>
   <img className='LastImg' src="who.jpg" alt="about"/>
   
