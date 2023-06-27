@@ -261,7 +261,7 @@ experience before, during, and after treatment. Our team of highly
 experienced <strong>doctors </strong> assure that you receive premium care at our
 partner hospitals. From providing a detailed diagnosis, scheduling
 your surgery, commuting to and from the hospital, completing your
-insurance paperwork and hospital discharge to follow-up
+insurance paperwork and hospital dischargedd to follow-up
 consultations, <strong>Save Lifes </strong>takes care of it 
 </div><div className='LastImage'>
   <img className='LastImg' src="who.jpg" alt="about"/>
